@@ -1,2 +1,8 @@
 # linked-lists
-An assignment for the computer science section of The Odin Project
+
+An assignment for the computer science section of The Odin Project.
+
+[Lesson and spec](https://www.theodinproject.com/courses/ruby-programming/lessons/linked-lists?ref=lnav)
+
+Pseudo code:
+
