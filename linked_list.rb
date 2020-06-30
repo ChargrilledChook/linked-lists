@@ -9,9 +9,16 @@ class LinkedList
     @pointer = 0
   end
 
-  def append(value)
+  def append(value) # IN PROGRESS
     if head.value.nil?
       head.value = value
+    else
+      current = head
+      cursor = current.next_node
+      if cursor.nil?
+        new_node = Node.new(value, nil)
+        cursor = new_node.value
+      end
     end
   end
 

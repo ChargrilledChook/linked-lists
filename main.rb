@@ -7,6 +7,7 @@ list.append('A')
 
 puts list.head.value
 
-list.prepend('B')
+list.append('B')
 
 puts list.head.value
+puts list.head.next_node
