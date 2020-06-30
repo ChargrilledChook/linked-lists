@@ -5,11 +5,11 @@ class LinkedList
   attr_accessor :head
 
   def initialize
-    @head = Node.new
+    @head = nil
   end
 
   def append(value) # IN PROGRESS
-    if head.value.nil?
+    if head.nil?
       head.value = value
     else
       current = head
@@ -36,7 +36,7 @@ class LinkedList
     return counter + 1
   end
 
-  def at(index) end #TODO
+  def at(index) end #TODO - 0 index head
 
   def pop #TODO
   end

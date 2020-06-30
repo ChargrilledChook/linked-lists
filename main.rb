@@ -3,11 +3,7 @@ require_relative 'node'
 
 list = LinkedList.new
 
-pp list
-
-list.append('A')
-
-pp list
+puts list.head.nil?
 
 list.prepend('B')
 
