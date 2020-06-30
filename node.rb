@@ -2,7 +2,10 @@
 
 # Represents a single node in the list
 class Node
-  def value(value = nil) end # TODO
+  attr_accessor :value, :next_node
 
-  def next_node(value = nil) end # TODO
+  def initialize(value = nil, next_node = nil)
+    @value = value
+    @next = next_node
+  end
 end

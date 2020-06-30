@@ -6,11 +6,18 @@ class LinkedList
 
   def initialize
     @head = Node.new
+    @pointer = 0
   end
 
-  def append(value) end #TODO
+  def append(value)
+    if head.value.nil?
+      head.value = value
+    end
+  end
 
-  def prepend(value) end #TODO
+  def prepend(value)
+
+  end
 
   def size #TODO
   end
