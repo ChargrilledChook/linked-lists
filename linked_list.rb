@@ -55,7 +55,7 @@ class LinkedList
     current_node
   end
 
-  def pop #TODO
+  def pop
     current = head
     current = current.next_node until current.next_node.next_node.nil?
     current.next_node = nil

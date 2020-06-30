@@ -5,7 +5,7 @@ require_relative 'node'
 
 list = LinkedList.new
 
-list.append('A')
+list.append({'key': 'value', 'key2': 80085})
 list.append('B')
 list.append('C')
 list.append('D')
