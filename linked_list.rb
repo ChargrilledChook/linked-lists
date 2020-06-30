@@ -30,19 +30,30 @@ class LinkedList
     counter = 0
     current = head
     until current.next_node.nil?
-      counter +=1 # add nil head edge case
+      counter += 1
       current = current.next_node
     end
-    return counter + 1
+    counter + 1 # check edge cases ie nil head
   end
 
-  def tail #TODO
+  def tail
     current = head
     current = current.next_node until current.next_node.nil?
     current
   end
 
-  def at(index) end #TODO - 0 index head
+  # Zero indexed. Raises IndexError if out of bounds
+  def at(index)
+    current_index = 0
+    current_node = head
+    until index == current_index || current_node.nil?
+      current_node = current_node.next_node
+      current_index += 1
+    end
+    raise IndexError if current_node.nil?
+
+    current_node
+  end
 
   def pop #TODO
   end
