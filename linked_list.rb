@@ -36,6 +36,12 @@ class LinkedList
     return counter + 1
   end
 
+  def tail #TODO
+    current = head
+    current = current.next_node until current.next_node.nil?
+    current
+  end
+
   def at(index) end #TODO - 0 index head
 
   def pop #TODO

@@ -30,3 +30,5 @@ puts list.size
 list.append(80085)
 
 list.to_s
+
+puts list.tail.value
