@@ -2,14 +2,17 @@
 
 # Represents the full list
 class LinkedList
+  attr_accessor :head
+
+  def initialize
+    @head = Node.new
+  end
+
   def append(value) end #TODO
 
   def prepend(value) end #TODO
 
   def size #TODO
-  end
-
-  def head #TODO
   end
 
   def at(index) end #TODO
