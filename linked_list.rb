@@ -8,7 +8,7 @@ class LinkedList
     @head = nil
   end
 
-  def append(value) # IN PROGRESS
+  def append(value)
     new_node = Node.new(value)
     if head.nil?
       self.head = new_node
@@ -26,32 +26,65 @@ class LinkedList
     self.head = new_head
   end
 
-  def size #TODO
+  def size
     counter = 0
     current = head
     until current.next_node.nil?
-      counter +=1 # add nil head edge case
+      counter += 1
       current = current.next_node
     end
-    return counter + 1
+    counter + 1 # check edge cases ie nil head
   end
 
-  def tail #TODO
+  def tail
     current = head
     current = current.next_node until current.next_node.nil?
     current
   end
 
-  def at(index) end #TODO - 0 index head
+  # Zero indexed. Raises IndexError if out of bounds
+  def at(index)
+    current_index = 0
+    current_node = head
+    until index == current_index || current_node.nil?
+      current_node = current_node.next_node
+      current_index += 1
+    end
+    raise IndexError if current_node.nil?
 
-  def pop #TODO
+    current_node
   end
 
-  def contains?(value) end #TODO
+  def pop #TODO
+    current = head
+    current = current.next_node until current.next_node.next_node.nil?
+    current.next_node = nil
+  end
 
-  def find(value) end #TODO
+  def contains?(value)
+    current = head
+    until current == tail
+      return true if current.value == value
 
-  def to_s #TODO
+      current = current.next_node
+    end
+    false
+  end
+
+  # Zero indexed, returns nil if not found
+  def find(value)
+    if contains?(value)
+      current_index = 0
+      current_node = head
+      until value == current_node.value
+        current_node = current_node.next_node
+        current_index += 1
+      end
+      current_index
+    end
+  end
+
+  def to_s
     current = head
     until current.next_node.nil?
       print "(#{current.value}) -> "
