@@ -13,3 +13,8 @@ puts list.at(0)
 puts list.at(1)
 puts list.at(2)
 puts list.at(3).value
+
+list.pop
+list.pop
+
+list.to_s

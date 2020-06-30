@@ -56,6 +56,9 @@ class LinkedList
   end
 
   def pop #TODO
+    current = head
+    current = current.next_node until current.next_node.next_node.nil?
+    current.next_node = nil
   end
 
   def contains?(value) end #TODO
