@@ -93,8 +93,17 @@ class LinkedList
     print "(#{current.value}) -> nil \n"
   end
 
-  def insert_at(value, index) end # Extra credit
+  # TODO
+  def insert_at(value, index)
+    if index.zero?
+      prepend(value)
+    else
+      new_node = Node.new(value, at(index))
+      at(index - 1).next_node = new_node
+    end
 
-  def remove_at(index) end # Extra credit
+  end
+  # Extra credit TODO
+  def remove_at(index) end
 
 end

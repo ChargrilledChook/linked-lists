@@ -23,3 +23,8 @@ puts list.contains?('Z')
 puts list.find('B')
 puts list.find('Z')
 puts list.find('Z').nil?
+
+list.insert_at('inserted', 2)
+list.insert_at('inserted again!', 3)
+
+list.to_s
