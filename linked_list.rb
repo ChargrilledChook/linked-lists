@@ -39,6 +39,12 @@ class LinkedList
   def find(value) end #TODO
 
   def to_s #TODO
+    current = head
+    until current.next_node.nil?
+      print "[#{current.value}] -> "
+      current = current.next_node
+    end
+    print "[#{current.value}] -> nil "
   end
 
   def insert_at(value, index) end # Extra credit

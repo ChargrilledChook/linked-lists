@@ -16,3 +16,5 @@ pp list
 list.prepend('C')
 
 pp list
+
+list.to_s
