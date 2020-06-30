@@ -8,7 +8,7 @@ class LinkedList
     @head = nil
   end
 
-  def append(value) # IN PROGRESS
+  def append(value)
     new_node = Node.new(value)
     if head.nil?
       self.head = new_node
@@ -26,7 +26,7 @@ class LinkedList
     self.head = new_head
   end
 
-  def size #TODO
+  def size
     counter = 0
     current = head
     until current.next_node.nil?
@@ -71,9 +71,20 @@ class LinkedList
     false
   end
 
-  def find(value) end #TODO
+  # Zero indexed, returns nil if not found
+  def find(value)
+    if contains?(value)
+      current_index = 0
+      current_node = head
+      until value == current_node.value
+        current_node = current_node.next_node
+        current_index += 1
+      end
+      current_index
+    end
+  end
 
-  def to_s #TODO
+  def to_s
     current = head
     until current.next_node.nil?
       print "(#{current.value}) -> "

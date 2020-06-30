@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'linked_list'
 require_relative 'node'
 
@@ -18,4 +20,6 @@ puts list.contains?('A')
 puts list.contains?('C')
 puts list.contains?('Z')
 
-
+puts list.find('B')
+puts list.find('Z')
+puts list.find('Z').nil?
