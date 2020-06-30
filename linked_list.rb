@@ -16,7 +16,8 @@ class LinkedList
   end
 
   def prepend(value)
-
+    new_head = Node.new(value, head.value)
+    self.head = new_head
   end
 
   def size #TODO
