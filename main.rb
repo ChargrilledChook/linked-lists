@@ -5,6 +5,10 @@ list = LinkedList.new
 
 puts list.head.nil?
 
+list.append('A')
+
+pp list
+
 list.prepend('B')
 
 pp list
@@ -22,3 +26,7 @@ list.prepend('O___o')
 list.to_s
 
 puts list.size
+
+list.append(80085)
+
+list.to_s

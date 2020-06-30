@@ -9,15 +9,15 @@ class LinkedList
   end
 
   def append(value) # IN PROGRESS
+    new_node = Node.new(value)
     if head.nil?
-      head.value = value
+      self.head = new_node
     else
       current = head
-      cursor = current.next_node
-      if cursor.nil?
-        new_node = Node.new(value, nil)
-        cursor = new_node.value
+      until current.next_node.nil?
+        current = current.next_node
       end
+      current.next_node = new_node
     end
   end
 
