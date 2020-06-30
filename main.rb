@@ -18,3 +18,11 @@ list.prepend('C')
 pp list
 
 list.to_s
+
+puts list.size
+
+list.prepend('O___o')
+
+list.to_s
+
+puts list.size

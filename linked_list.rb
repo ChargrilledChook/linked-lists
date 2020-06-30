@@ -27,6 +27,13 @@ class LinkedList
   end
 
   def size #TODO
+    counter = 0
+    current = head
+    until current.next_node.nil?
+      counter +=1 # add nil head edge case
+      current = current.next_node
+    end
+    return counter + 1
   end
 
   def at(index) end #TODO
@@ -41,10 +48,10 @@ class LinkedList
   def to_s #TODO
     current = head
     until current.next_node.nil?
-      print "[#{current.value}] -> "
+      print "(#{current.value}) -> "
       current = current.next_node
     end
-    print "[#{current.value}] -> nil "
+    print "(#{current.value}) -> nil \n"
   end
 
   def insert_at(value, index) end # Extra credit
