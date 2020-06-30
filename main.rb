@@ -3,7 +3,7 @@ require_relative 'node'
 
 list = LinkedList.new
 
-pp list
+puts list.head.nil?
 
 list.append('A')
 
@@ -26,3 +26,9 @@ list.prepend('O___o')
 list.to_s
 
 puts list.size
+
+list.append(80085)
+
+list.to_s
+
+puts list.tail.value
