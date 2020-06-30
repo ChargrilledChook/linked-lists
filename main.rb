@@ -3,11 +3,16 @@ require_relative 'node'
 
 list = LinkedList.new
 
+pp list
+
 list.append('A')
 
-puts list.head.value
+pp list
 
-list.append('B')
+list.prepend('B')
 
-puts list.head.value
-puts list.head.next_node
+pp list
+
+list.prepend('C')
+
+pp list

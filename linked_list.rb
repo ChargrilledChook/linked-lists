@@ -6,7 +6,6 @@ class LinkedList
 
   def initialize
     @head = Node.new
-    @pointer = 0
   end
 
   def append(value) # IN PROGRESS
@@ -23,7 +22,7 @@ class LinkedList
   end
 
   def prepend(value)
-    new_head = Node.new(value, head.value)
+    new_head = Node.new(value, head)
     self.head = new_head
   end
 
