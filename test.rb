@@ -14,7 +14,8 @@ puts list.at(1)
 puts list.at(2)
 puts list.at(3).value
 
-list.pop
-list.pop
+puts list.contains?('A')
+puts list.contains?('C')
+puts list.contains?('Z')
 
-list.to_s
+
