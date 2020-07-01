@@ -56,6 +56,11 @@ pp list2.find('value')
 
 puts list2.to_s
 
-list2.remove_at(0)
+list2.remove_at(6)
+
+puts list2.to_s
+puts list2.size
+list2.insert_at('new mid', 2)
+
 
 puts list2.to_s

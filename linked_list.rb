@@ -106,6 +106,7 @@ class LinkedList
   end
 
   def insert_at(value, index)
+    check_index(index)
     if index.zero?
       prepend(value)
     else
@@ -116,10 +117,15 @@ class LinkedList
 
   # First clause covers removing head of list
   def remove_at(index)
+    check_index(index)
     if index.zero?
       self.head = head.next_node
       return
     end
     at(index - 1).next_node = at(index + 1)
+  end
+
+  def check_index(index)
+    raise IndexError if index.negative? || index > size
   end
 end
