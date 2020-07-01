@@ -20,11 +20,12 @@ class LinkedList
   end
 
   def prepend(value)
-    new_head = Node.new(value, head)
-    self.head = new_head
+    self.head = Node.new(value, head)
   end
 
   def size
+    return 0 if head.nil?
+
     counter = 0
     current = head
     until current.next_node.nil?
