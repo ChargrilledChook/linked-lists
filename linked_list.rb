@@ -9,13 +9,12 @@ class LinkedList
   end
 
   def append(value)
-    new_node = Node.new(value)
     if head.nil?
-      self.head = new_node
+      self.head = Node.new(value)
     else
       current = head
       current = current.next_node until current.next_node.nil?
-      current.next_node = new_node
+      current.next_node = Node.new(value)
     end
   end
 
@@ -110,8 +109,7 @@ class LinkedList
     if index.zero?
       prepend(value)
     else
-      new_node = Node.new(value, at(index))
-      at(index - 1).next_node = new_node
+      at(index - 1).next_node = Node.new(value, at(index))
     end
   end
 
@@ -125,6 +123,7 @@ class LinkedList
     at(index - 1).next_node = at(index + 1)
   end
 
+  # Helper function for remove_at and insert_at - raise error for indexes that are negative or out of bounds
   def check_index(index)
     raise IndexError if index.negative? || index > size
   end

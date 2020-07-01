@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# File used for testing various functions of LinkedList class. Will learn proper TDD soon.
 require_relative 'linked_list'
 require_relative 'node'
 
@@ -50,17 +51,15 @@ list2.append('head')
 list2.append('popme')
 list2.append('tail')
 
-
 puts list2.contains?('value')
 pp list2.find('value')
 
 puts list2.to_s
 
-list2.remove_at(6)
+list2.remove_at(2)
 
 puts list2.to_s
 puts list2.size
 list2.insert_at('new mid', 2)
-
 
 puts list2.to_s
