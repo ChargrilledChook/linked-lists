@@ -47,4 +47,5 @@ puts list.to_s
 
 list2 = LinkedList.new
 
-pp list2.tail
+puts list2.at(0)
+pp list2.at(100)

@@ -51,7 +51,7 @@ class LinkedList
       current_node = current_node.next_node
       current_index += 1
     end
-    raise IndexError if current_node.nil?
+    return if current_node.nil?
 
     current_node
   end
