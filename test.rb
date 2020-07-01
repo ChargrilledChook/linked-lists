@@ -31,4 +31,4 @@ list.to_s
 
 list.remove_at(3)
 
-list.to_s
+puts list.to_s

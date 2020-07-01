@@ -84,11 +84,13 @@ class LinkedList
 
   def to_s
     current = head
+    result = ""
     until current.next_node.nil?
-      print "(#{current.value}) -> "
+      result += "(#{current.value}) -> "
       current = current.next_node
     end
-    print "(#{current.value}) -> nil \n"
+    result += "(#{current.value}) -> nil \n"
+    result
   end
 
   def insert_at(value, index)
