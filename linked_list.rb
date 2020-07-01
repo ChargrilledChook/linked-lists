@@ -32,7 +32,7 @@ class LinkedList
       counter += 1
       current = current.next_node
     end
-    counter + 1 # check edge cases ie nil head
+    counter + 1
   end
 
   def tail
@@ -43,7 +43,7 @@ class LinkedList
     current
   end
 
-  # Zero indexed. Raises IndexError if out of bounds
+  # Zero indexed. Returns nil if index out of bounds
   def at(index)
     current_index = 0
     current_node = head
@@ -56,7 +56,14 @@ class LinkedList
     current_node
   end
 
+  # First two clauses cover edge cases of list length 1 and 0 respectively
   def pop
+    if size == 1
+      self.head = nil
+      return
+    end
+    return if head.nil?
+
     current = head
     current = current.next_node until current.next_node.next_node.nil?
     current.next_node = nil
@@ -86,6 +93,8 @@ class LinkedList
   end
 
   def to_s
+    return if head.nil?
+
     current = head
     result = ''
     until current.next_node.nil?
@@ -105,7 +114,12 @@ class LinkedList
     end
   end
 
+  # First clause covers removing head of list
   def remove_at(index)
+    if index.zero?
+      self.head = head.next_node
+      return
+    end
     at(index - 1).next_node = at(index + 1)
   end
 end

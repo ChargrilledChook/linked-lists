@@ -46,6 +46,16 @@ list.remove_at(3)
 puts list.to_s
 
 list2 = LinkedList.new
+list2.append('head')
+list2.append('popme')
+list2.append('tail')
 
-puts list2.at(0)
-pp list2.at(100)
+
+puts list2.contains?('value')
+pp list2.find('value')
+
+puts list2.to_s
+
+list2.remove_at(0)
+
+puts list2.to_s
