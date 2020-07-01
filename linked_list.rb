@@ -84,7 +84,7 @@ class LinkedList
 
   def to_s
     current = head
-    result = ""
+    result = ''
     until current.next_node.nil?
       result += "(#{current.value}) -> "
       current = current.next_node
