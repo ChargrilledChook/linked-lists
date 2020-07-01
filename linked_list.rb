@@ -36,6 +36,8 @@ class LinkedList
   end
 
   def tail
+    return if head.nil?
+
     current = head
     current = current.next_node until current.next_node.nil?
     current

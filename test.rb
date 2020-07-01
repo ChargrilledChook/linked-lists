@@ -6,7 +6,7 @@ require_relative 'node'
 list = LinkedList.new
 
 list.prepend("I'm the head")
-
+puts list.tail.value
 puts list.size
 
 list.append({ 'key': 'value', 'key2': 80_085 })
@@ -47,4 +47,4 @@ puts list.to_s
 
 list2 = LinkedList.new
 
-puts list2.size
+pp list2.tail
