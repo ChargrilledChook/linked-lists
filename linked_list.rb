@@ -14,9 +14,7 @@ class LinkedList
       self.head = new_node
     else
       current = head
-      until current.next_node.nil?
-        current = current.next_node
-      end
+      current = current.next_node until current.next_node.nil?
       current.next_node = new_node
     end
   end
@@ -73,15 +71,15 @@ class LinkedList
 
   # Zero indexed, returns nil if not found
   def find(value)
-    if contains?(value)
-      current_index = 0
-      current_node = head
-      until value == current_node.value
-        current_node = current_node.next_node
-        current_index += 1
-      end
-      current_index
+    return unless contains?(value)
+
+    current_index = 0
+    current_node = head
+    until value == current_node.value
+      current_node = current_node.next_node
+      current_index += 1
     end
+    current_index
   end
 
   def to_s
@@ -100,11 +98,9 @@ class LinkedList
       new_node = Node.new(value, at(index))
       at(index - 1).next_node = new_node
     end
-
   end
 
   def remove_at(index)
     at(index - 1).next_node = at(index + 1)
   end
-
 end

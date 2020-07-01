@@ -5,7 +5,7 @@ require_relative 'node'
 
 list = LinkedList.new
 
-list.append({'key': 'value', 'key2': 80085})
+list.append({ 'key': 'value', 'key2': 80_085 })
 list.append('B')
 list.append('C')
 list.append('D')
@@ -20,7 +20,7 @@ puts list.contains?('A')
 puts list.contains?('C')
 puts list.contains?('Z')
 
-puts list.find('B')
+puts "finding 'B' : " + list.find('B').to_s
 puts list.find('Z')
 puts list.find('Z').nil?
 

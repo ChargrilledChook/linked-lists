@@ -29,7 +29,7 @@ list.to_s
 
 puts list.size
 
-list.append(80085)
+list.append(80_085)
 
 list.to_s
 
