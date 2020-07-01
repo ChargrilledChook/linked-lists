@@ -93,7 +93,6 @@ class LinkedList
     print "(#{current.value}) -> nil \n"
   end
 
-  # TODO
   def insert_at(value, index)
     if index.zero?
       prepend(value)
@@ -103,7 +102,9 @@ class LinkedList
     end
 
   end
-  # Extra credit TODO
-  def remove_at(index) end
+
+  def remove_at(index)
+    at(index - 1).next_node = at(index + 1)
+  end
 
 end

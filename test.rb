@@ -28,3 +28,7 @@ list.insert_at('inserted', 2)
 list.insert_at('inserted again!', 3)
 
 list.to_s
+
+list.remove_at(3)
+
+list.to_s
